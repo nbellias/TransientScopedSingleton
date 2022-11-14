@@ -7,4 +7,16 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\TransientService\" />
+    <None Remove="Services\ScopedService\" />
+    <None Remove="Services\SingletonService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\TransientService\" />
+    <Folder Include="Services\ScopedService\" />
+    <Folder Include="Services\SingletonService\" />
+  </ItemGroup>
 </Project>
