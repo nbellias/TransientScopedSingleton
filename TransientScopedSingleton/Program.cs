@@ -29,18 +29,18 @@ builder.Services
  * -------------
  * Transient lifetime services are created each time they are instantiated.
  * This lifetime works best for lightweight, stateless services.
- * Examples: email and SMS sending, unique codes for users creation, currency conversion, database migration/update processing, etc., services
+ * Examples: email and SMS sending, unique codes for users creation, currency conversion, database migration/update processing, etc., services.
  * 
  * AddScoped
  * ----------
  * Scoped lifetime services are instantiated once per request.
- * Examples: database context, expensive computations, shopping cart, user-uploaded processing, user session, etc., services
+ * Examples: database context, expensive computations, shopping cart, user-uploaded processing, user session, etc., services.
  * 
  * AddSingleton
  * -------------
  * Singleton lifetime services are instantiated the first time they are requested (or when ConfigureServices is run if you specify an instance there) 
  * and then every subsequent request will use the same instance.
- * Examples: logging, configuration, caching, message queueing, etc., services
+ * Examples: logging, configuration, caching, message queueing, etc., services.
  * 
  */
 
