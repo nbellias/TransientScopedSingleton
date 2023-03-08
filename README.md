@@ -11,13 +11,17 @@ The lifetime of the service depends on when the dependency is instantiated and h
 The below three methods define the lifetime of the services,
 
 ## AddTransient
-Transient lifetime services are created each time they are requested. This lifetime works best for lightweight, stateless services.
+Transient lifetime services are created each time they are instantiated.
+This lifetime works best for lightweight, stateless services.
+Examples: Email and SMS sending, unique codes creation for users, currency conversion, database migration/update processing, etc., services.
 
 ## AddScoped
-Scoped lifetime services are created once per request.
+Scoped lifetime services are instantiated once per request.
+Examples: database context, expensive computations, shopping cart, user-uploaded processing, user session, etc., services.
 
 ## AddSingleton
-Singleton lifetime services are created the first time they are requested (or when ConfigureServices is run if you specify an instance there) and then every subsequent request will use the same instance.
+Singleton lifetime services are instantiated the first time they are requested (or when ConfigureServices is run if you specify an instance there) and then every subsequent request will use the same instance.
+Examples: logging, configuration, caching, message queueing, etc., services
 
 ## Run the app
 Once we execute the application, we will see two different Guids are displayed for their respective service types. Now run two instance of UI in two different tabs of the browser like request 1 and request 2.
